@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".score.ScoreFragment">
+
+    <data>
+        <variable
+            name="scoreViewModel"
+            type="com.example.verdaderofalso.score.ScoreViewModel" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/simpson" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:background="#FFEB3B">
+
+
+            <TextView
+                android:id="@+id/textViewCorrectas"
+                style="@style/styleLabel"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="36dp"
+                android:text="@{@string/fS_correctas(scoreViewModel.correctas)}"
+                android:textColor="#1D6E21"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFan"
+                tools:text="@string/fS_correctas" />
+
+            <TextView
+                android:id="@+id/textViewIncorrectas"
+                style="@style/styleLabel"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:text="@{@string/fS_incorrectas(scoreViewModel.incorrectas)}"
+                android:textColor="#E84444"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewCorrectas"
+                tools:text="@string/fS_incorrectas" />
+
+            <TextView
+                android:id="@+id/textView"
+                style="@style/stylePregunta"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/fs_fan_nivel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textViewFan"
+                style="@style/stylePregunta"
+                android:layout_marginTop="32dp"
+                android:text="@{@string/fs_fan(scoreViewModel.fan)}"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+            <Button
+                android:id="@+id/buttonSalir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:layout_marginStart="28dp"
+                android:text="@string/fs_button_salir"
+                android:textColor="#040404"
+                app:backgroundTint="#FF5722"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:rippleColor="#150A0A" />
+
+            <Button
+                android:id="@+id/buttonJugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="28dp"
+                android:layout_marginEnd="28dp"
+                android:text="@string/fs_button_jugar"
+                android:textColor="#040404"
+                app:backgroundTint="#FF5722"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:rippleColor="#150A0A" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+</layout>

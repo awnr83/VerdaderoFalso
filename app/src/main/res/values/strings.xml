@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">The Simpsons!!! Verdadero o Falso</string>
+
+    <!--Principal-->
+    <string name="fp_title_vf">Verdadero o Falso</string>
+    <string name="fp_title_l">¿Cuanto sabes?</string>
+    <string name="fp_title_Simpson">The Simpson!!</string>
+    <string name="fp_button_jugar">Jugar</string>
+
+    <!--Game-->
+    <string name="fg_reloj">00:00</string>
+    <string name="fg_correctas">Correctas: %d</string>
+    <string name="fg_incorrectas">Incorrectas: %d</string>
+    <string name="fg_valor">0</string>
+
+    <!--Score-->
+    <string name="fs_button_salir">Salir</string>
+    <string name="fs_button_jugar">Volver a Jugar</string>
+    <string name="fS_correctas">Correctas: %d</string>
+    <string name="fS_incorrectas">Incorrectas: %d</string>
+    <string name="fs_fan">\" %s \"</string>
+    <string name="fs_fan_nivel">Nivel de Fan:</string>
+</resources>
